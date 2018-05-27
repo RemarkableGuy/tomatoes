@@ -4,10 +4,7 @@ import com.relay42.tomatoes.domain.TomatoSale;
 import org.springframework.stereotype.Service;
 
 import java.sql.Timestamp;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Random;
-import java.util.UUID;
+import java.util.*;
 
 @Service
 public class TomatoSaleService {
@@ -18,9 +15,9 @@ public class TomatoSaleService {
 
     private String[] providers = {"Heinz", "Hunt's", "Del Monte", "Le Ol' Granma"};
 
-    public ArrayList<TomatoSale> getSales(int size) {
+    public List<TomatoSale> getSales(int size) {
         Random random = new Random();
-        ArrayList<TomatoSale> list = new ArrayList<>();
+        List<TomatoSale> list = new ArrayList<>();
         for (int i = 0; i < size; i++) {
             list.add(new TomatoSale(UUID.randomUUID(), random.nextInt(MAX - MIN + 1) + MIN, this.providers[random.nextInt(this.providers.length)], this.getRandomTimestamp()));
         }

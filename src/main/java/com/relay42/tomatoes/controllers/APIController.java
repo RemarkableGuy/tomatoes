@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
+import java.util.List;
 
 @RestController
 public class APIController {
@@ -21,7 +21,7 @@ public class APIController {
 
 
     @RequestMapping(value = "/data")
-    public ArrayList<TomatoSale> getSales(@RequestParam(value = "size", defaultValue = "3") int size) {
+    public List<TomatoSale> getSales(@RequestParam(value = "size", defaultValue = "3") int size) {
         return this.tomatoSaleService.getSales(size);
     }
 }
