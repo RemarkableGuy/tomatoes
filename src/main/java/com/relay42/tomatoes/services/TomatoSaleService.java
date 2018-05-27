@@ -9,7 +9,7 @@ import java.util.*;
 @Service
 public class TomatoSaleService {
 
-    private static final int MAX = 1000;
+    private static final int MAX = 2000;
     private static final int MIN = 1;
     private static final String BEGIN = "2018-01-01 00:00:00";
 
