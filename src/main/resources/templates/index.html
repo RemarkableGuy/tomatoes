@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Tomato Market</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <link rel="stylesheet" th:href="@{/css/stylesheet.css}">
+</head>
+<body>
+<div class="navbar-fixed">
+    <nav>
+        <div class="nav-wrapper">
+            <a href="/" class="brand-logo center"><i class="medium material-icons">multiline_chart</i>Tomato Market</a>
+        </div>
+    </nav>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col s11">
+            <div class="input-field">
+                <label for="size">Size</label>
+                <input id="size" type="text" class="validate">
+            </div>
+        </div>
+        <div class="col s1">
+            <button onclick="getData(document.getElementById('size').value)" class="waves-effect waves-light btn-large">Refresh</button>
+        </div>
+    </div>
+
+    <table>
+        <thead>
+        <tr>
+            <th>Provider</th>
+            <th>Tomatoes</th>
+            <th>Sale date</th>
+        </tr>
+        </thead>
+
+        <tbody id="tbody">
+        </tbody>
+    </table>
+</div>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+<script type="text/javascript" th:src="@{/js/main.js}"></script>
+</body>
+</html>

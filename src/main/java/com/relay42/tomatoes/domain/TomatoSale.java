@@ -2,17 +2,19 @@ package com.relay42.tomatoes.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import java.util.UUID;
 
 @AllArgsConstructor
+@NoArgsConstructor
 @Getter
 public class TomatoSale implements Comparable<TomatoSale> {
 
-    private final UUID id;
-    private final int tomatoes;
-    private final String provider;
-    private final long timestamp;
+    private UUID id;
+    private int tomatoes;
+    private String provider;
+    private long timestamp;
 
     @Override
     public int compareTo(TomatoSale tomatoSale) {
