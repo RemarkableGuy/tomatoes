@@ -11,18 +11,25 @@
     <link rel="stylesheet" th:href="@{/css/stylesheet.css}">
 </head>
 <body>
-<nav>
-    <div class="nav-wrapper">
-        <span class="brand-logo center"><i class="medium material-icons">multiline_chart</i>Tomato Market</span>
-    </div>
-</nav>
+<div class="navbar-fixed">
+    <nav>
+        <div class="nav-wrapper">
+            <a href="/" class="brand-logo center"><i class="medium material-icons">multiline_chart</i>Tomato Market</a>
+        </div>
+    </nav>
+</div>
 
 <div class="container">
-
-    <div class="input-fieldh">
-        <input id="size" type="text" class="validate">
-        <label for="size">Size</label>
-        <button onclick="getdata(document.getElementById('size').value)">Refresh</button>
+    <div class="row">
+        <div class="col s11">
+            <div class="input-field">
+                <label for="size">Size</label>
+                <input id="size" type="text" class="validate">
+            </div>
+        </div>
+        <div class="col s1">
+            <button onclick="getdata(document.getElementById('size').value)" class="waves-effect waves-light btn-large">Refresh</button>
+        </div>
     </div>
 
     <table>

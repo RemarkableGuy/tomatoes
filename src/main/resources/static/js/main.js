@@ -15,9 +15,9 @@ function getdata(size){
 }
 
 function show(arr) {
-    console.log(arr);
+    document.getElementById("tbody").innerHTML = "";
     arr.forEach(function (element) {
         var date = ((new Date(element.timestamp)));
-       document.getElementById("tbody").innerHTML += "<tr><td>" + element.provider + "</td><td>" + element.tomatoes + "</td><td>"+ date.toLocaleDateString("nl-NL") + "</td></tr>";
+        document.getElementById("tbody").innerHTML += "<tr><td>" + element.provider + "</td><td>" + element.tomatoes + "</td><td>"+ date.toLocaleDateString("nl-NL") + "</td></tr>";
     });
 }
